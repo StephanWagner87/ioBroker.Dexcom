@@ -1,0 +1,20 @@
+{
+  "common": {
+    "name": "dexcom",
+    "version": "0.0.1",
+    "title": "Dexcom Adapter",
+    "authors": [
+      "Your Name"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "icon": "dexcom.png",
+    "enabled": true
+  },
+  "native": {
+    "username": "",
+    "password": "",
+    "pollInterval": 300
+  },
+  "objects": []
+}

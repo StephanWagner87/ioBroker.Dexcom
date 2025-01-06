@@ -1,5 +1,3 @@
-# ioBroker.Dexcom
-Get Glucose Data from Dexcom Share API
-
+# Dexcom Adapter for ioBroker
 
 This adapter fetches real-time glucose data from the Dexcom API.
