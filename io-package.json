@@ -3,21 +3,81 @@
     "name": "dexcom",
     "version": "0.0.1",
     "title": "Dexcom Adapter",
+    "titleLang": {
+      "en": "Dexcom Adapter",
+      "de": "Dexcom Adapter"
+    },
+    "desc": {
+      "en": "Fetches glucose data from Dexcom API",
+      "de": "Holt Glukosedaten von der Dexcom API"
+    },
     "authors": [
-      "Stephan Wagner"
+      "Stephan"
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
-    "icon": "dexcom.png",
-    "enabled": true
+    "icon": "icon.png",
+    "enabled": true,
+    "mode": "daemon",
+    "messagebox": false,
+    "materialize": true,
+    "adminUI": {
+      "config": "json",
+      "icon": true
+    },
+    "supportCustoms": false,
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "dependencies": [
+      {
+        "js-controller": ">=3.3.22"
+      }
+    ],
+    "news": {
+      "0.0.1": {
+        "en": "Initial version",
+        "de": "Erste Version"
+      }
+    },
+    "localLinks": {
+      "_default": "%web_protocol%://%ip%:%web_port%/adapter/%instance%/"
+    }
   },
   "native": {
     "username": "",
     "password": "",
     "pollInterval": 300
   },
-  "objects": [],
+  "objects": [
+    {
+      "_id": "glucose.current",
+      "type": "state",
+      "common": {
+        "name": "Current Glucose Level",
+        "type": "number",
+        "role": "value.glucose",
+        "read": true,
+        "write": false,
+        "unit": "mg/dL"
+      },
+      "native": {}
+    },
+    {
+      "_id": "glucose.timestamp",
+      "type": "state",
+      "common": {
+        "name": "Timestamp",
+        "type": "string",
+        "role": "date",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    }
+  ],
   "files": {
     "admin": true
-  }
+  },
+  "instanceObjects": []
 }
