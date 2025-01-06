@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "title": "Dexcom Adapter",
     "authors": [
-      "Your Name"
+      "Stephan Wagner"
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
@@ -16,5 +16,8 @@
     "password": "",
     "pollInterval": 300
   },
-  "objects": []
+  "objects": [],
+  "files": {
+    "admin": true
+  }
 }
